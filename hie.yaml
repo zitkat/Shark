@@ -1,0 +1,10 @@
+cradle:
+  stack:
+    - path: "./test/Spec.hs"
+      component: "shark:test:shark-test"
+
+    - path: "./app/Main.hs"
+      component: "shark:exe:shark-exe"
+
+    - path: "./src/Lib.hs"
+      component: "shark:lib"

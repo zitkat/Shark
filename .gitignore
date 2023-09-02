@@ -1,0 +1,8 @@
+.stack-work/
+*~
+dist-newstyle/
+
+.vscode
+*.so
+*.o
+*.hi

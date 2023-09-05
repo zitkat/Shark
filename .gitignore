@@ -7,3 +7,6 @@ dist-newstyle/
 *.exe
 *.o
 *.hi
+
+compile_commands.json
+.cache

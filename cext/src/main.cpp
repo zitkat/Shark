@@ -1,6 +1,6 @@
 #include "parq.h"
 
 int main(){
-    sayhello(1);
+    file_head("build.sh");
     return 0;
 }

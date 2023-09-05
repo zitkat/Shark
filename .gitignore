@@ -4,5 +4,6 @@ dist-newstyle/
 
 .vscode
 *.so
+*.exe
 *.o
 *.hi

@@ -6,7 +6,7 @@
 #      Author: Tomas Zitka
 
 CC=clang++
-CFLAGS=-Wall -pedantic
+CFLAGS=-g -Wall -pedantic
 
 OBJ=parq.o
 LINKOBJ=libparq
@@ -22,14 +22,14 @@ all: $(BIN) clean
 lib: $(LINKOBJ) clean
 
 $(BIN): $(LINKOBJ)
-	$(CC) -I include/ src/main.cpp -L. -lparq -o $(BIN)  
+	$(CC) $(CFLAGS) -I include/ src/main.cpp -L. -lparq -o $(BIN)  
 
 
 $(LINKOBJ): $(OBJ)
-	$(CC) -shared parq.o -o $(LIB)
+	$(CC) $(CFLAGS) -shared parq.o -o $(LIB)
 
 parq.o:
-	$(CC) -c $(CFLAGS) -I include -fPIC -c lib/parq.cpp
+	$(CC) $(CFLAGS) -I include -fPIC -c lib/parq.cpp
 	
 clean:
 	$(RM) $(OBJ)
